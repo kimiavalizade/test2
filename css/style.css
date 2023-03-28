@@ -2,88 +2,79 @@
 	box-sizing: border-box;
 }
 
-.h1-style1 {
-	font-size: 30px;
-}
-.p1-style {
-	font-size: 10px;
-}
-
-.style1 {
-    float: left;
-}
-
-.spanstyle1 {
-	text-decoration: underline #666666c7;
-}
-
-
-.astyle {
-    color: #3751e2;
-}
-
-.style3 {
-    float: right;
-		margin-bottom: 15px;
-}
-
-
-.row:after {
-	content: "";
-  display: table;
+.clear_fix::after {
   clear: both;
-}
-.row {
-	background-color: #e7e6e7c7;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	padding-top: 10px;
-	padding-bottom: 40px;
-	/*margin-left: 10%;
-	margin-right: 10%;*/
-  max-width: 1400px;
-  margin: 0 auto;
+  display: table;
+  content: "";
 }
 
-/* Create columns*/
-.column {
-	float: left;
-  padding: 10px;
-  height: 450px;
-	display: block;
-	margin-left: auto;
+.main_wrapper {
+  max-width: 1380px;
+  margin-left: auto;
 	margin-right: auto;
 }
 
-/* Left and right column */
-.column.side1 {
-  width: 90%;
-  background-color:#ecebec;
-	text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-	overflow: scroll;
-	margin-left: 20px;
-  float: right;
+body,
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 
+.header_txt {
+	font-size: 30px;
+  margin: 20px auto;
+}
 
-/* Left and right column */
-.column.side2 {
-  width: 90%;
-  background-color:#ecebec;
-	text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-	margin-left: 20px;
+.size_txt {
+	font-size: 10px;
+  margin: 20px auto;
+}
+
+.style4 {
+  margin: 10px auto;
+
+}
+
+.underline_text {
+  text-decoration: underline
+}
+
+.style1 {
   float: left;
 }
 
-.styleimg {
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.a_color {
+  color: #3751e2;
 }
+
+.style3 {
+  float: right;
+	margin-bottom: 15px;
+}
+
+.row {
+	background-color: #e7e6e7c7;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: auto 10px;
+}
+
+.column.side1 {
+  background-color:#ecebec;
+	text-align: center;
+	overflow: scroll;
+  margin: 20px auto;
+}
+
+
+.column.side2 {
+  background-color:#ecebec;
+	text-align: center;
+  margin: 20px auto;
+}
+
 
 .contact:link, .contact:visited {
   background-color: #f44336;
@@ -93,21 +84,19 @@
   text-decoration: none;
   display: inline-block;
 	border-radius: 30px;
+  margin: 20px auto;
 }
 
 .contact:hover, .contact:active {
   background-color: red;
 }
 
-/* responsive  */
-@media screen and (min-width: 900px) {
-	.column.side1 {
-    width: 40%;
-		margin-left: 50px;
-  }
-  .column.side2 {
-    width: 40%;
-		margin-left: 50px;
-  }
-
+@media screen and (min-width: 800px) {
+	.child {
+		width: 50%;
+	}
+	.child:nth-child(1) {
+    float: right;
+		margin-right: 10px;
+	}
 }
